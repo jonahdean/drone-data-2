@@ -14,7 +14,7 @@ zcdb = ZipCodeDatabase()
 
 
 url_base = '/assembly_tree/'
-server = Flask(__name__, static_url_path='/static')
+server = app.server
 app = dash.Dash(__name__, server=server, url_base_pathname=url_base)
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 app.config.suppress_callback_exceptions = True
